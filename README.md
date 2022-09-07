@@ -1,5 +1,8 @@
 ## Installation
-For now you're able to download ZIP folder manually and insert it into your project.
+For now you're able to clone repo in your project or download ZIP folder manually.
+```
+git clone https://github.com/votehserxam/AutoLayout.git
+```
 
 
 ## Usage
@@ -27,17 +30,16 @@ All layout anchors properties are available in shorten form:
 - `width`
 - `height`
 
-> Notice that `left and right` actually mean `leading and trailing`, so if you need to implement RTL, it will just work. Also now you don't need to add minus to `bottom` and `right` offsets.
+> Notice that `left and right` actually mean `leading and trailing`, so no need to keep in mind RTL anymore, it just works. Also don't need to add minus to `bottom` and `right` offsets.
 
 Width and height constraints are defined in the same old ways like `.equalToConstant(100)` or `.equalTo(someView.width)`, but with more options and combinations.
 
 
-### Just fit
-It might be that you just need to fit one view into another and there is a solution...
+### How to fit one view in another?
+If you need to fit one view into another, there is a solution...
 
 ```Swift
-
-// If you need to match one view with another and make offset from edges.
+// Matching one view with another and making offset from edges.
 thisView.match(
     view: thatView,
     offset: .init(
@@ -46,15 +48,15 @@ thisView.match(
     )
 )
 
-// If you just need to match superview.
+// Just matching superview.
 thisView.matchSuperview()
 ```
-### Center everything
-Same principle as a `match` function, but now it's necessary to define view's size.
+
+### How to center views?
+It's only necessary to specify view in which another view will be centered and its size.
 
 ```Swift
-
-// If you need to center some view in another with offset.
+// Also you can define offset from center.
 thisView.center(
     in: thatView,
     width: .equalTo(thatView.width),
@@ -62,7 +64,8 @@ thisView.center(
     yOffset: 12
 )
 
-//  Also it's possible to center in superview
+// Also possible to center in superview.
 thisView.centerInSuperview()
 ```
+
 > Notice that if you don't specify `width` or `height` values in `centerInSuperview()`, it will be taken as a superview's size values.
