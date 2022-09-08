@@ -53,7 +53,7 @@ thisView.matchSuperview()
 ```
 
 ### How to center views?
-Just specify the view to place another one in.
+Just specify the view with size to center another one in.
 
 ```Swift
 // Also you can define offset from center.
