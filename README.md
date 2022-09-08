@@ -3,7 +3,7 @@ For now you're able to clone repo in your project or download ZIP folder manuall
 ```
 git clone https://github.com/votehserxam/AutoLayout.git
 ```
-
+> After cloning don't forget to add `AutoLayout` folder in Project Navigator in Xcode.
 
 ## Usage
 ### All in one
