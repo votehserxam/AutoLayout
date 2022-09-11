@@ -120,6 +120,7 @@ extension UIView {
         view: UIView,
         offset: Edges = Edges()
     ) {
+        translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: view.topAnchor, constant: offset.top),
             leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: offset.left),
@@ -144,6 +145,7 @@ extension UIView {
         xOffset: CGFloat = 0,
         yOffset: CGFloat = 0
     ) {
+        translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: xOffset),
             centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: yOffset),
@@ -160,6 +162,7 @@ extension UIView {
         yOffset: CGFloat = 0
     ) {
         guard let view = superview else {return}
+        translatesAutoresizingMaskIntoConstraints = false
         var actualWidth: NSLayoutConstraint!
         var actualHeight: NSLayoutConstraint!
         
