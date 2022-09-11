@@ -48,11 +48,11 @@ extension UIView {
     }
     
     private func getBottomAnchor(from bottom: YAnchor) -> NSLayoutConstraint {
-        return bottomAnchor.constraint(equalTo: bottom.anchor, constant: bottom.constant)
+        return bottomAnchor.constraint(equalTo: bottom.anchor, constant: -bottom.constant)
     }
     
     private func getRightAnchor(from right: XAnchor) -> NSLayoutConstraint {
-        return trailingAnchor.constraint(equalTo: right.anchor, constant: right.constant)
+        return trailingAnchor.constraint(equalTo: right.anchor, constant: -right.constant)
     }
     
     private func getCenterXAnchor(from centerX: XAnchor) -> NSLayoutConstraint {
