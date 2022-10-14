@@ -31,12 +31,12 @@ extension UILayoutGuide {
     var bottom: YAnchor { return (anchor: bottomAnchor, constant: 0) }
     
     /// A layout anchor of bottom view’s edge with offset.
-    func bottom(_ constant: CGFloat) -> YAnchor { return (anchor: bottomAnchor, constant: -constant) }
+    func bottom(_ constant: CGFloat) -> YAnchor { return (anchor: bottomAnchor, constant: constant) }
     
     /// A layout anchor of right view’s edge.
     var right: XAnchor { return (anchor: trailingAnchor, constant: 0) }
     
     /// A layout anchor of right view’s edge with offset.
-    func right(_ constant: CGFloat) -> XAnchor { return (anchor: trailingAnchor, constant: -constant) }
+    func right(_ constant: CGFloat) -> XAnchor { return (anchor: trailingAnchor, constant: constant) }
     
 }
